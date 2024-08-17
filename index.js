@@ -1,3 +1,13 @@
+window.addEventListener("load", function() {
+    const loader = document.getElementById("loader");
+    const welcomePage = document.getElementById("main");
+
+    setTimeout(function() {
+        loader.style.display = "none";
+        welcomePage.style.display = "block";
+    }, 5000);
+});
+
 const scroll = new LocomotiveScroll({
     el: document.querySelector('#main'),
     smooth: true
