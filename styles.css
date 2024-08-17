@@ -3,6 +3,25 @@
     margin: 0;
 }
 
+#loader {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loader img {
+    width: 500px;
+    height: auto;
+}
+
+
 html, body{
     position: relative;
     width: 100%;
