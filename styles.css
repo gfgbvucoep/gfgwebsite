@@ -94,6 +94,7 @@ nav{
     background-position: bottom;
     background-repeat: no-repeat;
     height: 70vh;
+    background-position-y: 8rem;
 }
 
 
@@ -527,6 +528,9 @@ a{
     }
 }
 @media(max-width: 480px){
+    .background-section{
+        background-position-y: bottom;
+    }
     #section1_right p{
         font-size: 3.5rem;
     }
