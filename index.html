@@ -23,21 +23,37 @@
     <div id="loader">
         <img src="loader.gif" alt="Loading...">
     </div>
+
+    <div id="image"> <img src="./images/logo.png" alt=""></div>
+    <!-- floating navigation -->
+    <div class="floating-nav">
+        <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
+        <label for="menu-icon"></label>
+            <nav class="nav">
+                <ul class="pt-5">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="./pages/html/team.html">TEAM</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+    </div>
+
     <div id="main">
         <nav>
             <div class="nav-div">
-                <h3>HOME</h3>
-                <h3>EVENTS</h3>
-                <h3>TEAM</h3>
+                <a href="#">HOME</a>
+                <a href="#">EVENTS</a>
+                <a href="./pages/html/team.html">TEAM</a>
                 <div class="img">
                     <img src="./images/logo.png" alt="">
                 </div>
-                <h3>ABOUT</h3>
-                <h3>CONTACT</h3>
+                <a href="#">ABOUT</a>
+                <a href="#">CONTACT</a>
                 <button>SIGN IN</button>
             </div>
         </nav>
-        <div class="main">
+        <div class="main" data-scroll>
             <section class="background-section pb-5 curvy-box hero">
                 <div class="px-3 py-2 pb-5 mb-3">
                     <div class="container">
@@ -116,7 +132,7 @@
                 </div>
             </section>
         
-            <section style="background-color: #ffffff; display: flex; align-items: center; justify-content: center; color: black; border-bottom-left-radius: 50px; border-bottom-right-radius: 50px;">
+            <section class="next-section" style="background-color: #ffffff; display: flex; align-items: center; justify-content: center; color: black; border-bottom-left-radius: 50px; border-bottom-right-radius: 50px;">
                 <div class="px-5 mx-5 text-left thirdLast white" style="flex: 1;">
                     <h1 class="py-5 display-5 white fw-bold text-body-emphasis aboutGfg">About GeeksforGeeks BVUCOEP</h1>
                     <div>
@@ -156,7 +172,7 @@
             </div>
             <p id="more_aboutgfg_pera">Join us on a journey of continuous learning and discovery. Whether you're a beginner or a seasoned professional, there's a place for you at GeeksforGeeks BVUCOEP.</p>
         </div>
-        <button onclick="hide_show()" id="see_more_button">See More About GeeksforGeeks BVUCOEP</button>
+        <button id="btn" onclick="hide_show()" id="see_more_button">See More About GeeksforGeeks BVUCOEP</button>
     
         <div id="section1" class="special">
             <div id="section1_left">
