@@ -1,0 +1,39 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #a8e6cf, #dcedc1, #dcedc1, #a8e6cf);
+    background-size: 300% 300%;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.coming-soon-container {
+    text-align: center;
+    color: white;
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.coming-soon-container h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.coming-soon-container p {
+    font-size: 1.2em;
+    margin: 20px 0 0;
+}
