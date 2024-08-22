@@ -1,3 +1,8 @@
+@font-face {
+    font-family: head;
+    src: url(./Heading-Now-Variable.ttf);
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -915,7 +920,24 @@ a{
 
 
 /* OUR EVENT  */
+#page3{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
 
+}
+
+#page3 h1{
+    color: white;
+    font-family: head;
+    text-transform: uppercase;
+    font-size: 40vw;
+    font-family: head;
+    font-stretch: 250%;
+    white-space: nowrap;
+    font-weight: 999;
+}
 
 /* EVENT END  */
 
@@ -1124,8 +1146,15 @@ a{
     #image{
         display: block;
     }
-
-   
+    #page3{
+        display: flex;
+        flex-direction: column;
+        height: 70vh;
+        justify-content: center;
+    }
+    #page3 h1{
+        font-size: 40vw;
+    }
 }
 @media(max-width: 400px){
     #section1_right p{
