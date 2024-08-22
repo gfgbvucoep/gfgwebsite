@@ -5,6 +5,7 @@
 }
 
 
+
 html, body{
     position: relative;
     width: 100%;
@@ -41,7 +42,7 @@ html, body{
     color: #000000;
 }
 
-.nav{
+.floating-nav .nav{
     position: fixed;
     top: 12px;
     right: 22px;
@@ -87,7 +88,7 @@ html, body{
                 height 750ms 1000ms cubic-bezier(0.23, 1, 0.32, 1);
   }
   
-  .nav ul{
+  .floating-nav .nav ul{
     position: absolute;
     top: 50%;
     left: 0;
@@ -100,7 +101,7 @@ html, body{
     transform: translateY(-50%);
     list-style: none;
   }
-  .nav ul li{
+  .floating-nav .nav ul li{
     position: relative;
     display: block;
     width: 100%;
@@ -114,19 +115,19 @@ html, body{
     transform: translateY(30px);
     transition: all 250ms linear;
   }
-  .nav ul li:nth-child(1){
+  .floating-nav .nav ul li:nth-child(1){
     transition-delay: 200ms;
   }
-  .nav ul li:nth-child(2){
+  .floating-nav .nav ul li:nth-child(2){
     transition-delay: 150ms;
   }
-  .nav ul li:nth-child(3){
+  .floating-nav .nav ul li:nth-child(3){
     transition-delay: 100ms;
   }
-  .nav ul li:nth-child(4){
+  .floating-nav .nav ul li:nth-child(4){
     transition-delay: 50ms;
   }
-  .nav ul li a{
+  .floating-nav .nav ul li a{
     font-family: 'Montserrat', sans-serif;
     font-size: 9vh;
     text-transform: uppercase;
@@ -137,11 +138,11 @@ html, body{
     color: #ececee;
     transition: all 250ms linear;
   }
-  .nav ul li a:hover{
+  .floating-nav .nav ul li a:hover{
     text-decoration: none;
     color: #ffeba7;
   }
-  .nav ul li a:after{
+  .floating-nav .nav ul li a:after{
     display: block;
     position: absolute;
     top: 50%;
@@ -154,7 +155,7 @@ html, body{
     opacity: 0.8;
     transition: width 250ms linear;
   }
-  .nav ul li a:hover:after{
+  .floating-nav .nav ul li a:hover:after{
     width: 100%;
   }
   
@@ -285,14 +286,14 @@ ul > li {
     color: gray;
     
 }
-nav{
+#main> nav{
     width: 100%;
     height: 10vh;
     background-color: #FFFCF8 !important;
     cursor: pointer;
 }
 
-.nav-div{
+#main nav .nav-div{
     width: 100%;
     height: 100%;
     display: flex;
@@ -300,7 +301,7 @@ nav{
     align-items: center
 }
 
-.nav-div a{
+#main nav .nav-div a{
     text-decoration: none;
     color: #000000;
     font-size:.9rem;
@@ -339,9 +340,11 @@ nav{
     margin-top: 5%;
     
 }
-.main{
+
+#main .main{
+    /* opacity: 0; */
     background-color: #FFFCF8 !important;
-    margin-top: .8rem;
+    padding-top: .8rem;
 }
 .background-section {
     background-image: url('./images/homePageBackground.png');
@@ -747,6 +750,180 @@ a{
     text-align: center;
     font-size: 1vw;
 }
+
+/* carousel */
+
+#carousel{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 3rem; */
+    background-color: red;
+}
+
+#carousel main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  }
+  
+  #carousel main ul .item {
+    background-color: red;
+    width: 200px;
+    height: 300px;
+    list-style-type: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 30px rgba(255,255,255,0.3) inset;
+    transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
+  
+    &:nth-child(1), &:nth-child(2) {
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transform: none;
+      border-radius: 0;
+      box-shadow: none;
+      opacity: 1;
+    }
+  
+    &:nth-child(3) { left: 50%; }
+    &:nth-child(4) { left: calc(50% + 220px); }
+    &:nth-child(5) { left: calc(50% + 440px); }
+    &:nth-child(6) { left: calc(50% + 660px); opacity: 0; }
+  }
+  
+  #carousel main ul .item .content {
+    width: min(30vw,400px);
+    position: absolute;
+    top: 50%;
+    left: 3rem;
+    transform: translateY(-50%);
+    font: 400 0.85rem helvetica,sans-serif;
+    color: white;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.5);
+    opacity: 0;
+    display: none;
+  
+    & .title {
+      font-family: 'arial-black';
+      text-transform: uppercase;
+    }
+  
+    & .description {
+    line-height: 1.7;
+    margin: 1rem 0 1.5rem;
+    font-size: 0.8rem;
+    }
+
+    & button {
+    width: fit-content;
+    background-color: rgba(0,0,0,0.1);
+    color: white;
+    border: 2px solid white;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    cursor: pointer;
+    }
+}
+
+.item:nth-of-type(2) .content {
+    display: block;
+    animation: show 0.75s ease-in-out 0.3s forwards;
+}
+
+@keyframes show {
+    0% {
+      filter: blur(5px);
+      transform: translateY(calc(-50% + 75px));
+    }
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+  
+  #carousel main nav {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    user-select: none;
+    background-color: transparent;
+  
+    
+    & .btn {
+        background-color: rgba(255,255,255,0.5);
+        color: rgba(0,0,0,0.7);
+        border: 2px solid rgba(0,0,0,0.6);
+        margin: 0 0.25rem;
+        padding: 0.75rem;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &:hover {
+        background-color: rgba(255,255,255,0.3);
+        }
+        }
+        }
+
+    @media (width > 650px) and (width < 900px) {
+    #carousel main ul li .content {
+        & .title        { font-size: 1rem; }
+        & .description  { font-size: 0.7rem; }
+        & button        { font-size: 0.7rem; }
+        }
+        #carousel main ul .item {
+        width: 160px;
+        height: 270px;
+
+        &:nth-child(3) { left: 50%; }
+        &:nth-child(4) { left: calc(50% + 170px); }
+        &:nth-child(5) { left: calc(50% + 340px); }
+        &:nth-child(6) { left: calc(50% + 510px); opacity: 0; }
+        }
+    }
+
+    @media (width < 650px) {
+    #carousel main ul li .content {
+        & .title        { font-size: 0.9rem; }
+        & .description  { font-size: 0.65rem; }
+        & button        { font-size: 0.7rem; }
+    }
+    #carousel main ul .item {
+        width: 130px;
+        height: 220px;
+
+        &:nth-child(3) { left: 50%; }
+        &:nth-child(4) { left: calc(50% + 140px); }
+        &:nth-child(5) { left: calc(50% + 280px); }
+        &:nth-child(6) { left: calc(50% + 420px); opacity: 0; }
+    }
+}
+
+/* carousel END */
+
+
+/* OUR EVENT  */
+
+
+/* EVENT END  */
+
+
+
+
+
+
 
 /* media query */
 @media(max-width: 1084px){
