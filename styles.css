@@ -1149,7 +1149,7 @@ a{
     #page3{
         display: flex;
         flex-direction: column;
-        height: 70vh;
+        height: 100vh;
         justify-content: center;
     }
     #page3 h1{
