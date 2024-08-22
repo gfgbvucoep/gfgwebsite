@@ -1149,11 +1149,11 @@ a{
     #page3{
         display: flex;
         flex-direction: column;
-        height: 100vh;
+        height: 100vh !important;
         justify-content: center;
     }
     #page3 h1{
-        font-size: 40vw;
+        font-size: 45vw;
     }
 }
 @media(max-width: 400px){
