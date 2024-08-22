@@ -1,19 +1,64 @@
-window.addEventListener("load", function() {
-    const loader = document.getElementById("loader");
-    const welcomePage = document.getElementById("main");
+function loco(){
+    gsap.registerPlugin(ScrollTrigger);
 
-    setTimeout(function() {
-        loader.style.display = "none";
-        welcomePage.style.display = "block";
-    }, 5000);
-});
+// Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
 
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('#main'),
+const locoScroll = new LocomotiveScroll({
+    el: document.querySelector("#main"),
     smooth: true
 });
 
+locoScroll.on("scroll", ScrollTrigger.update);
+
+ScrollTrigger.scrollerProxy("#main", {
+    scrollTop(value) {
+    return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+    }, 
+    getBoundingClientRect() {
+    return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
+    },
+
+    pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
+    });
+
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+    ScrollTrigger.refresh();
+}
+loco()
+
 var tl = gsap.timeline();
+
+tl.to("#loader img",{
+    delay:0.3,
+    duration:4,
+    onStart:time()
+})
+tl.to("#loader",{
+    top:"-100vh",
+    duration:1,
+    delay:.5,
+})
+
+Shery.mouseFollower();  
+Shery.makeMagnet(".magnet");
+
+tl.from("#main>.main>.hero",{
+    scale:0,
+    duration:0.4, 
+})
+
+function time(){
+    window.addEventListener("load", function() {
+        const loader = document.getElementById("loader");
+        const welcomePage = document.getElementById("main");
+    
+        setTimeout(function() {
+            loader.style.display = "none";
+            welcomePage.style.display = "block";
+        }, 7000);
+    });
+}
 
 gsap.from(".nav-div h3, button",{
     y: -80,
@@ -52,11 +97,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// document.querySelector(".gfgLogo").addEventListener(click, function () {
-//     window.location.href = "./index.html"; 
-// });
-
-
 var div = document.getElementById('show_more');
 var display = 0 ;
 
@@ -71,4 +111,3 @@ function hide_show(){
         display = 0;
     }
 }
-

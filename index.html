@@ -7,49 +7,45 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="
-    https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css
-    " rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+        <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <div id="loader">
         <img src="loader.gif" alt="Loading...">
     </div>
-    <div id="image"> <img src="./images/logo.png" alt=""></div>
     <!-- floating navigation -->
     <div class="floating-nav">
         <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
         <label for="menu-icon"></label>
-            <nav class="nav">
-                <ul class="pt-5">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="./pages/html/about.html">About</a></li>
-                    <li><a href="./pages/html/team.html">TEAM</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
+        <nav class="nav">
+            <ul class="pt-5">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="./pages/html/about.html">About</a></li>
+                <li><a href="./pages/html/team.html">TEAM</a></li>
+                <li><a href="./pages/html/event.html">Event</a></li>
+                <li><a href="./pages/html/contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </div>
-
+    
     <div id="main">
+        <div id="image"> <img src="./images/logo.png" alt=""></div>
         <nav>
             <div class="nav-div">
-                <a href="index.html">HOME</a>
-                <a href="#">EVENTS</a>
-                <a href="./pages/html/team.html">TEAM</a>
+                <a class="magnet" href="index.html">HOME</a>
+                <a class="magnet"  href="./pages/html/event.html">EVENTS</a>
+                <a class="magnet"  href="./pages/html/team.html">TEAM</a>
                 <div class="img">
-                    <img src="./images/logo.png" alt="">
+                    <img  class="magnet" src="./images/logo.png" alt="">
                 </div>
-                <a href="./pages/html/about.html">ABOUT</a>
-                <a href="#">CONTACT</a>
-                <button>SIGN IN</button>
+                <a class="magnet"  href="./pages/html/about.html">ABOUT</a>
+                <a class="magnet"  href="./pages/html/contact.html">CONTACT</a>
+                <button class="magnet">SIGN IN</button>
             </div>
         </nav>
         <div class="main" data-scroll>
@@ -120,8 +116,8 @@
                         <p class="secondSectionText py-3">Join us to explore innovative technologies, connect with industry experts, and participate in engaging sessions.</p>
                     
                         <div class="jOP d-grid gap-2 d-flex justify-content-start">
-                            <button type="button" class="b-1 btn btn-dark px-4 py-2 gap-3">Become A Member</button>
-                            <button type="button" class="b-1 btn btn-outline-dark py-2 px-5">Learn More</button>
+                            <button type="button" class="magnet b-1 btn btn-dark px-4 py-2 gap-3">Become A Member</button>
+                            <button type="button" class="magnet b-1 btn btn-outline-dark py-2 px-5">Learn More</button>
                         </div>
                     </div>
         
@@ -137,7 +133,7 @@
                     <div>
                         <p class="lead mb-4" style="color: black;">GeeksforGeeks BVUCOEP is dedicated to nurturing the next generation of tech enthusiasts by providing a platform for learning and growth in various domains.</p>
                         <div class="d-grid gap-2 d-sm-flex justify-content-sm-start pt-4 pb-5">
-                            <button type="button" class="btn btn-outline-light btn-lg px-4" style="background-color: black;">Explore More About Us</button>
+                            <button type="button" class="magnet btn btn-outline-light btn-lg px-4" style="background-color: black;">Explore More About Us</button>
                         </div>
                     </div>
                 </div>
@@ -147,6 +143,73 @@
             </section>
         </div>
         
+        <!-- <div id="carousel">
+                <main>
+                <ul class='slider'>
+                  <li class='item' style="background-image: url('https://cdn.mos.cms.futurecdn.net/dP3N4qnEZ4tCTCLq59iysd.jpg')">
+                    <div class='content'>
+                      <h2 class='title'>"Lossless Youths"</h2>
+                      <p class='description'> Lorem ipsum, dolor sit amet consectetur
+                      adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+                      praesentium nisi. Id laboriosam ipsam enim.  </p>
+                      <button>Read More</button>
+                    </div>
+                  </li>
+                  <li class='item' style="background-image: url('https://i.redd.it/tc0aqpv92pn21.jpg')">
+                    <div class='content'>
+                      <h2 class='title'>"Estrange Bond"</h2>
+                      <p class='description'> Lorem ipsum, dolor sit amet consectetur
+                      adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+                      praesentium nisi. Id laboriosam ipsam enim.  </p>
+                      <button>Read More</button>
+                    </div>
+                  </li>
+                  <li class='item' style="background-image: url('https://wharferj.files.wordpress.com/2015/11/bio_north.jpg')">
+                    <div class='content'>
+                      <h2 class='title'>"The Gate Keeper"</h2>
+                      <p class='description'> Lorem ipsum, dolor sit amet consectetur
+                      adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+                      praesentium nisi. Id laboriosam ipsam enim.  </p>
+                      <button>Read More</button>
+                    </div>
+                  </li>
+                  <li class='item' style="background-image: url('https://images7.alphacoders.com/878/878663.jpg')">
+                    <div class='content'>
+                      <h2 class='title'>"Last Trace Of Us"</h2>
+                      <p class='description'>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.
+                      </p>
+                      <button>Read More</button>
+                    </div>
+                  </li>
+                  <li class='item' style="background-image: url('https://theawesomer.com/photos/2017/07/simon_stalenhag_the_electric_state_6.jpg')">
+                    <div class='content'>
+                      <h2 class='title'>"Urban Decay"</h2>
+                      <p class='description'>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.
+                      </p>
+                      <button>Read More</button>
+                    </div>
+                  </li>
+                  <li class='item' style="background-image: url('https://da.se/app/uploads/2015/09/simon-december1994.jpg')">
+                    <div class='content'>
+                      <h2 class='title'>"The Migration"</h2>
+                      <p class='description'> Lorem ipsum, dolor sit amet consectetur
+                      adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+                      praesentium nisi. Id laboriosam ipsam enim.  </p>
+                      <button>Read More</button>
+                    </div>
+                  </li>
+                </ul>
+                <nav class='nav'>
+                  <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
+                  <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
+                </nav>
+              </main>
+              
+              <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+              <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        </div> -->
         <div id="section1" class="special" data-scroll="data-scroll-speed="-7">
             <div id="section1_right">
                 <p>About</p>
@@ -159,12 +222,14 @@
                     <p>Explore how we bring together students, mentors, and professionals to foster a collaborative learning environment.</p>
                 </div>
             </div>
-        </div>
-    
+        </div> 
+        
+  
+
         <div id="about_lower">
             <p id="about_lower_pera">At GeeksforGeeks BVUCOEP, we are committed to providing a nurturing environment where aspiring tech enthusiasts can learn, grow, and make meaningful contributions to the tech community.</p>
         </div>
-    
+        
         <div class="show_more" id="show_more">
             <div id="show_more_logo">
                 <img src="./images/gfg_logo.png" alt="logo" id="logo_img">
@@ -183,7 +248,7 @@
                     <p>Learn from the best and connect with peers who share your passion for technology.</p>
                 </div>
                 <div class="view_more">
-                    <button>View all</button>
+                    <button class="magnet">View all</button>
                 </div>
             </div>
             <div id="section1_right">
@@ -252,180 +317,179 @@
             </div>
         </footer> -->
         <!-- Remove the container if you want to extend the Footer to full width. -->
-<div class="my-5">
-    <!-- Footer -->
-    <footer
-            class="text-center text-lg-start text-dark"
-            style="background-color: #ECEFF1"
-            >
-      <!-- Section: Social media -->
-      <section
-               class="d-flex justify-content-between p-4 text-white"
-               style="background-color: #148943"
-               >
-        <!-- Left -->
-        <div class="me-5">
-          <span>Let's Connect 🤝:</span>
-        </div>
-        <!-- Left -->
-  
-        <!-- Right -->
-        <div>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-youtube"></i>
-          </a>
-        </div>
-        <!-- Right -->
-      </section>
-      <!-- Section: Social media -->
-  
-      <!-- Section: Links  -->
-      <section class="">
-        <div class="container text-center text-md-start mt-5">
-          <!-- Grid row -->
-          <div class="row mt-3">
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-              <!-- Content -->
-              <h6 class="text-uppercase fw-bold">Our Mission</h6>
-              <hr
-                  class="mb-4 mt-0 d-inline-block mx-auto"
-                  style="width: 60px; background-color: #7c4dff; height: 2px"
-                  />
-              <p>
-                Empowering students at BVUCOEP through innovation, collaboration, and real-world tech challenges, GFG BVUCOEP fosters a community of future leaders ready to make a difference in the world of technology.
-              </p>
-            </div>
-            <!-- Grid column -->
-  
-            <!-- Grid column -->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold">Useful Links</h6>
-              <hr
-                  class="mb-4 mt-0 d-inline-block mx-auto"
-                  style="width: 60px; background-color: #7c4dff; height: 2px"
-                  />
-              <p>
-                <a href="index.html" class="text-dark">Home</a>
-              </p>
-              <p>
-                <a href="./pages/html/comingsoon.html" class="text-dark">Become a Member</a>
-              </p>
-              <p>
-                <a href="./pages/html/about.html" class="text-dark">About Us</a>
-              </p>
-              <p>
-                <a href="./pages/html/team.html" class="text-dark">Our Team</a>
-              </p>
-            </div>
-            <!-- Grid column -->
-  
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold">Resources</h6>
-              <hr
-                  class="mb-4 mt-0 d-inline-block mx-auto"
-                  style="width: 60px; background-color: #7c4dff; height: 2px"
-                  />
-              <p>
-                <a href="./pages/html/comingsoon.html" class="text-dark">Become Our Sponsor</a>
-              </p>
-              <p>
-                <a href="./pages/html/comingsoon.html" class="text-dark">Call For Speakers</a>
-              </p>
-              <p>
-                <a href="./pages/html/comingsoon.html" class="text-dark">Knowledge Sessions</a>
-              </p>
-              <p>
-                <a href="./pages/html/comingsoon.html" class="text-dark">Our Archives</a>
-              </p>
-            </div>
-            <!-- Grid column -->
+        <div class="my-5">
+            <!-- Footer -->
+            <footer
+                    class="text-center text-lg-start text-dark"
+                    style="background-color: #ECEFF1"
+                    >
+            <!-- Section: Social media -->
+            <section
+                    class="d-flex justify-content-between p-4 text-white"
+                    style="background-color: #148943"
+                    >
+                <!-- Left -->
+                <div class="me-5">
+                <span>Let's Connect 🤝:</span>
+                </div>
+                <!-- Left -->
+        
+                <!-- Right -->
+                <div>
+                <a href="" class="text-white me-4">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="text-white me-4">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="" class="text-white me-4">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="" class="text-white me-4">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                </div>
+                <!-- Right -->
+            </section>
+            <!-- Section: Social media -->
+        
+            <!-- Section: Links  -->
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <!-- Content -->
+                    <h6 class="text-uppercase fw-bold">Our Mission</h6>
+                    <hr
+                        class="mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 60px; background-color: #7c4dff; height: 2px"
+                        />
+                    <p>
+                        Empowering students at BVUCOEP through innovation, collaboration, and real-world tech challenges, GFG BVUCOEP fosters a community of future leaders ready to make a difference in the world of technology.
+                    </p>
+                    </div>
+                    <!-- Grid column -->
+        
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold">Useful Links</h6>
+                    <hr
+                        class="mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 60px; background-color: #7c4dff; height: 2px"
+                        />
+                    <p>
+                        <a href="index.html" class="text-dark">Home</a>
+                    </p>
+                    <p>
+                        <a href="./pages/html/comingsoon.html" class="text-dark">Become a Member</a>
+                    </p>
+                    <p>
+                        <a href="./pages/html/about.html" class="text-dark">About Us</a>
+                    </p>
+                    <p>
+                        <a href="./pages/html/team.html" class="text-dark">Our Team</a>
+                    </p>
+                    </div>
+                    <!-- Grid column -->
+        
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold">Resources</h6>
+                    <hr
+                        class="mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 60px; background-color: #7c4dff; height: 2px"
+                        />
+                    <p>
+                        <a href="./pages/html/comingsoon.html" class="text-dark">Become Our Sponsor</a>
+                    </p>
+                    <p>
+                        <a href="./pages/html/comingsoon.html" class="text-dark">Call For Speakers</a>
+                    </p>
+                    <p>
+                        <a href="./pages/html/comingsoon.html" class="text-dark">Knowledge Sessions</a>
+                    </p>
+                    <p>
+                        <a href="./pages/html/comingsoon.html" class="text-dark">Our Archives</a>
+                    </p>
+                    </div>
+                    <!-- Grid column -->
 
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                <!-- Links -->
-                <h6 class="text-uppercase fw-bold">Follow Other Communities</h6>
-                <hr
-                    class="mb-4 mt-0 d-inline-block mx-auto"
-                    style="width: 60px; background-color: #7c4dff; height: 2px"
-                    />
-                <p>
-                  <a href="https://gdg.community.dev/gdg-pune/" class="text-dark">GDG Pune</a>
-                </p>
-                <p>
-                  <a href="https://developers.google.com/womentechmakers" class="text-dark">Women Tech Makers</a>
-                </p>
-                <p>
-                  <a href="https://www.instagram.com/gdsc.pune/" class="text-dark">GDSC Pune</a>
-                </p>
-                <p>
-                  <a href="https://fossunited.org/" class="text-dark">FOSS United India</a>
-                </p>
-                <p>
-                    <a href="https://techbrewers.org/" class="text-dark">Club Techbrewers</a>
-                </p>
-              </div>
-              <!-- Grid column -->
-  
-            <!-- Grid column -->
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold">Contact</h6>
-              <hr
-                  class="mb-4 mt-0 d-inline-block mx-auto"
-                  style="width: 60px; background-color: #7c4dff; height: 2px"
-                  />
-              <p><i class="fas fa-home mr-3"></i> Bharati Vidyapeeth (Deemed to be University) College of Engineering, Katraj, Pune, 411043</p>
-              <p><i class="fas fa-envelope mr-3"></i> info@gfgbvucoep.com</p>
-              <p><i class="fas fa-phone mr-3"></i> + 91 0000000000</p>
-              <p><i class="fas fa-print mr-3"></i> + 91 0000000000</p>
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">Follow Other Communities</h6>
+                        <hr
+                            class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px"
+                            />
+                        <p>
+                        <a href="https://gdg.community.dev/gdg-pune/" class="text-dark">GDG Pune</a>
+                        </p>
+                        <p>
+                        <a href="https://developers.google.com/womentechmakers" class="text-dark">Women Tech Makers</a>
+                        </p>
+                        <p>
+                        <a href="https://www.instagram.com/gdsc.pune/" class="text-dark">GDSC Pune</a>
+                        </p>
+                        <p>
+                        <a href="https://fossunited.org/" class="text-dark">FOSS United India</a>
+                        </p>
+                        <p>
+                            <a href="https://techbrewers.org/" class="text-dark">Club Techbrewers</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+        
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold">Contact</h6>
+                    <hr
+                        class="mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 60px; background-color: #7c4dff; height: 2px"
+                        />
+                    <p><i class="fas fa-home mr-3"></i> Bharati Vidyapeeth (Deemed to be University) College of Engineering, Katraj, Pune, 411043</p>
+                    <p><i class="fas fa-envelope mr-3"></i> info@gfgbvucoep.com</p>
+                    <p><i class="fas fa-phone mr-3"></i> + 91 0000000000</p>
+                    <p><i class="fas fa-print mr-3"></i> + 91 0000000000</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+                </div>
+            </section>
+            <!-- Section: Links  -->
+        
+            <!-- Copyright -->
+            <div
+                class="text-center p-3"
+                style="background-color: rgba(0, 0, 0, 0.2)"
+                >
+                © 2024 Copyright:
+                <a class="text-dark" href="https://geeksforgeeks.org/"
+                >gfgbvucoep.com</a
+                >
             </div>
-            <!-- Grid column -->
-          </div>
-          <!-- Grid row -->
+            <!-- Copyright -->
+            </footer>
+            <!-- Footer -->
         </div>
-      </section>
-      <!-- Section: Links  -->
-  
-      <!-- Copyright -->
-      <div
-           class="text-center p-3"
-           style="background-color: rgba(0, 0, 0, 0.2)"
-           >
-        © 2024 Copyright:
-        <a class="text-dark" href="https://geeksforgeeks.org/"
-           >gfgbvucoep.com</a
-          >
-      </div>
-      <!-- Copyright -->
-    </footer>
-    <!-- Footer -->
-  </div>
     </div>
-<script src="https://kit.fontawesome.com/7fd707a2b9.js" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script
-    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
-    integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"
-></script>
-<script src="./index.js"></script>
+
+
+    <script src="https://kit.fontawesome.com/7fd707a2b9.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+    ></script>
+    <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+    <script src="./index.js"></script>
 </html>
