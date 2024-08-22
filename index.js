@@ -48,6 +48,37 @@ tl.from("#main>.main>.hero",{
     duration:0.4, 
 })
 
+gsap.to("#page3 h1",{
+    transform:"translateX(-180%)",
+    fontWeight:"100",
+    scrollTrigger:{
+        trigger:"#page3",
+        scroller:"#main",
+        scrub:3,
+        pin: true,
+        start: "top 0%",
+        end:"top -200%"
+    }
+})
+
+
+
+gsap.from(".nav-div h3, button",{
+    y: -80,
+    opacity: 0,
+    duration:0.8,
+    stagger: 0.2,
+})
+
+
+
+
+
+
+
+
+
+
 function time(){
     window.addEventListener("load", function() {
         const loader = document.getElementById("loader");
@@ -60,12 +91,7 @@ function time(){
     });
 }
 
-gsap.from(".nav-div h3, button",{
-    y: -80,
-    opacity: 0,
-    duration:0.8,
-    stagger: 0.2,
-})
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const counters = document.querySelectorAll('.value'); // Select all elements with the class 'value'
