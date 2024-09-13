@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruitment Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 5% auto;
+            padding: 20px;
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        label {
+            font-size: 16px;
+            margin-bottom: 5px;
+            display: block;
+            font-weight: 400;
+        }
+
+        input[type="text"], input[type="tel"], input[type="file"], textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            background-color: #333;
+            color: white;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        input[type="file"] {
+            border: 1px solid #555;
+        }
+
+        textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background-color: #00b894;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-weight: 600;
+        }
+
+        button:hover {
+            background-color: #009e76;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            button {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>GFG Student Chapter BVDUCOEP Recruitments</h1>
+        <form id="recruitment-form" action="https://script.google.com/macros/s/AKfycbwx1jWrjibQs4sNUh--O-ZhZezVhkOlDQjiaSWDez4SVac8Sl9UuZPvcfgHy3cyXk4U/exec" method="post" enctype="multipart/form-data">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your full name" required>
+
+            <label for="prn">PRN Number</label>
+            <input type="text" id="prn" placeholder="Enter your PRN number" required>
+
+            <label for="mobile">Mobile Number</label>
+            <input type="tel" id="mobile" placeholder="Enter your mobile number" required>
+
+            <label for="whatsapp">WhatsApp Number</label>
+            <input type="tel" id="whatsapp" placeholder="Enter your WhatsApp number" required>
+
+            <label for="resume">Upload Your Resume</label>
+            <input type="file" id="resume" accept=".pdf,.doc,.docx" required>
+
+            <label for="domain">Choose the Domain</label>
+            <select id="domain" required>
+                <option value="">Select a Domain</option>
+                <option value="tech">Tech</option>
+                <option value="event-management">Event Management</option>
+                <option value="design">Design</option>
+                <option value="outreach">Outreach</option>
+            </select>
+
+            <label for="proof">Share your Proof of Work</label>
+            <textarea id="proof" placeholder="Share your best work related to the domain you selected" required></textarea>
+
+            <label for="reason">Why do you want to join GFG Student Chapter BVDUCOEP?</label>
+            <textarea id="reason" placeholder="Let us know your motivation" required></textarea>
+
+            <label for="socials">Share all of your socials</label>
+            <input type="text" id="socials" placeholder="Link your social media profiles" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="scriptzz.js"></script>
+</body>
+</html>
