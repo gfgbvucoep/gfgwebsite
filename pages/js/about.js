@@ -5,6 +5,7 @@ var four = document.getElementById("four");
 
 document.querySelector("#a").addEventListener("click", function () {
   if (one.style.display === "none" || one.style.display === "") {
+    one.style.display.transition = "all 3s";
     one.style.display = "block";
     two.style.display = "none";
     three.style.display = "none";
