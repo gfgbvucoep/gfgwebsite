@@ -14,9 +14,7 @@
             margin: 0;
             padding: 0;
         }
-
         .container {
-    
             border: 1px solid rgba( 255, 255, 255, 0.18 );
             width: 80%;
             max-width: 800px;
@@ -26,33 +24,27 @@
              border-radius: 10px; 
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
         }
-
         #recruitment-form input::placeholder{
           padding-left: 15px;
         }
         #recruitment-form textarea::placeholder{
           padding-left: 15px;
         }
-       
-
         h1 {
             text-align: center;
             margin-bottom: 30px;
             font-size: 36px;
             font-weight: 600;
         }
-
         label {
             font-size: 16px;
             margin-bottom: 5px;
             display: block;
             font-weight: 400;
         }
-
-        input[type="text"], input[type="tel"], input[type="file"], textarea, select {
+        input[type="text"], input[type="tel"], input[type="email"], input[type="file"], textarea, select {
             width: 100%;
-            padding: 10px 0px 10px 2px;
-            
+            padding: 10px 0px 10px 2px;   
             margin-bottom: 20px;
             border: none;
             background-color: #333;
@@ -61,175 +53,151 @@
             font-size: 14px;
             /* box-shadow: inset -1px 4px 9px 0px black; */
         }
-
         input[type="file"] {
             border: 1px solid #555;
             box-shadow: inset 14px 2px 20px 1px black;
-
         }
-
         textarea {
             resize: none;
             height: 100px;
         }
-
-        
-form > button {
-  padding: 1.3em 3em;
-  font-size: 12px;
-  width: 100%;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  font-weight: 500;
-  color: #000;
-  background-color: #fff;
-  border: none;
-  border-radius: 45px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease 0s;
-  cursor: pointer;
-  outline: none;
-}
-
-button:hover {
-  background-color: #23c483;
-  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-  color: #fff;
-  transform: translateY(-7px);
-}
-
-button:active {
-  transform: translateY(-1px);
-}
-
+        form > button {
+            padding: 1.3em 3em;
+            font-size: 12px;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            font-weight: 500;
+            color: #000;
+            background-color: #fff;
+            border: none;
+            border-radius: 45px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            outline: none;
+        }
+        button:hover {
+            background-color: #23c483;
+            box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+            color: #fff;
+            transform: translateY(-7px);
+        }
+        button:active {
+            transform: translateY(-1px);
+        }
         @media only screen and (max-width: 768px) {
             .container {
                 /* width: 90%; */
             }
-
             h1 {
                 font-size: 28px;
             }
-
             button {
                 font-size: 16px;
             }
         }
-
-
-
-    
-
-
        /* but css */
-
- .but{
-    /* padding: 15px 40px; */
-    border: none;
-    outline: none;
-    color: aliceblue;
-    position: relative;
-    z-index: 0;
-    border-radius: 12px;
-}
-.but::after{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-color: rgb(19, 18, 18);
-    left: 0;
-    top: 0;
-    border-radius: 12px;
-}
-.but::before {
-    content: "";
-    background: linear-gradient(
+    .but{
+        /* padding: 15px 40px; */
+        border: none;
+        outline: none;
+        color: aliceblue;
+        position: relative;
+        z-index: 0;
+        border-radius: 12px;
+    }
+    .but::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: rgb(19, 18, 18);
+        left: 0;
+        top: 0;
+        border-radius: 12px;
+    }
+    .but::before {
+        content: "";
+        background: linear-gradient(
         45deg,
         #f90c0c, #FF7300, #FFFB00, #48FF00,
         #00FFD5, #002BFF, #FF00C8, #FF0000
-    );
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    background-size: 600%;
-    z-index: -1;
-    width: calc(100% + 4px);
-    height:calc(100% + 4px);
-    filter: blur(7px);
-    transition: optacity .3s ease-in-out;
-    animation: glowing 20s linear infinite;
-    border-radius: 10px;
-    opacity: 0.43;
-}
-@keyframes glowing{
-    0% {background-position: 0 0;}
-    50% {background-position: 400% 0;}
-    100% {background-position: 0 0;}
-}
-.but:hover::before{
-    opacity: 0.5;
-}
-.but:active::after{
-    /* background: transparent; */
-}
-.but:active{
-    /* color: black ; */
-    font-weight: bolder;
-}
-
-    </style>
+        );
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background-size: 600%;
+        z-index: -1;
+        width: calc(100% + 4px);
+        height:calc(100% + 4px);
+        filter: blur(7px);
+        transition: optacity .3s ease-in-out;
+        animation: glowing 20s linear infinite;
+        border-radius: 10px;
+        opacity: 0.43;
+    }
+    @keyframes glowing{
+        0% {background-position: 0 0;}
+        50% {background-position: 400% 0;}
+        100% {background-position: 0 0;}
+    }
+    .but:hover::before{
+        opacity: 0.5;
+    }
+    .but:active::after{
+        /* background: transparent; */
+    }
+    .but:active{
+        /* color: black ; */
+        font-weight: bolder;
+    }
+</style>
 </head>
 <body>
   <div class="container but w-3/4">
     <h1>GeeksforGeeks Student Chapter BVDUCOEP Recruitments</h1>
-    <form id="recruitment-form" action="https://script.google.com/macros/s/AKfycbwx1jWrjibQs4sNUh--O-ZhZezVhkOlDQjiaSWDez4SVac8Sl9UuZPvcfgHy3cyXk4U/exec" method="post" enctype="multipart/form-data">
+    <form id="recruitment-form" enctype="multipart/form-data">
         <label for="name">Name</label>
-        <input type="text" id="name" placeholder="Enter your full name" required>
+        <input type="text" name="name" id="name" placeholder="Enter your full name" required>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email address" required>
 
         <label for="prn">PRN Number</label>
-        <input type="text" id="prn" placeholder="Enter your PRN number" required>
+        <input type="text" name="prn" id="prn" placeholder="Enter your PRN number" required>
 
         <label for="mobile">Mobile Number</label>
-        <input type="tel" id="mobile" placeholder="Enter your mobile number" required>
+        <input type="tel" name="mobile" id="mobile" placeholder="Enter your mobile number" required>
 
         <label for="whatsapp">WhatsApp Number</label>
-        <input type="tel" id="whatsapp" placeholder="Enter your WhatsApp number" required>
+        <input type="tel" name="whatsapp" id="whatsapp" placeholder="Enter your WhatsApp number" required>
 
         <label for="resume">Upload Your Resume</label>
-        <input type="file" id="resume" accept=".pdf,.doc,.docx" required>
+        <input type="file" name="resume" id="resume" accept=".pdf,.doc,.docx" required>
 
         <label for="domain">Choose the Domain</label>
-        <select id="domain" required>
+        <select id="domain" name="domain" required>
             <option value="">Select a Domain</option>
-            <option value="tech">Tech</option>
-            <option value="event-management">Event Management</option>
-            <option value="design">Design</option>
-            <option value="outreach">Outreach</option>
+            <option value="Tech">Tech</option>
+            <option value="Event Management">Event Management</option>
+            <option value="Design">Design</option>
+            <option value="Outreach">Outreach</option>
         </select>
 
         <label for="proof">Share your Proof of Work</label>
-        <textarea id="proof" placeholder="Share your best work related to the domain you selected" required></textarea>
+        <textarea name="proof" id="proof" placeholder="Share your best work related to the domain you selected" required></textarea>
 
         <label for="reason">Why do you want to join GFG Student Chapter BVDUCOEP?</label>
-        <textarea id="reason" placeholder="Let us know your motivation" required></textarea>
+        <textarea name="reason" id="reason" placeholder="Let us know your motivation" required></textarea>
 
         <label for="socials">Share all of your socials</label>
-        <input type="text" id="socials" placeholder="Link your social media profiles" required>
+        <input type="text" name="socials" id="socials" placeholder="Link your social media profiles" required>
 
-        <!-- <button type="submit">Submit</button> -->
-
-        <!-- submit  -->
-         <button>Button</button>
+        <button type="submit">Submit</button>
     </form>
   </div>
-
-
-
-
-   
-
-    <script src="scriptzz.js"></script>
+<script src="scriptzz.js"></script>
 </body>
 </html>
