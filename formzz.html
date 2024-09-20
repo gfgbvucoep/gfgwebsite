@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -147,8 +148,8 @@ button:active {
     content: "";
     background: linear-gradient(
         45deg,
-        #f90c0c, #FF7300, #FFFB00, #48FF00,
-        #00FFD5, #002BFF, #FF00C8, #FF0000
+        #2203ef, #0d00ff, #00a2ff, #92ff67,
+        #00d0ff, #0051ff, #00aeff, #59ec63
     );
     position: absolute;
     top: -2px;
@@ -179,6 +180,10 @@ button:active {
     font-weight: bolder;
 }
 
+/* model style */
+
+
+
     </style>
 </head>
 <body>
@@ -188,47 +193,80 @@ button:active {
         <label for="name">Name</label>
         <input type="text" id="name" placeholder="Enter your full name" required>
 
+        <label for="gender">Gender</label>
+        <div class="gender-options">
+            <label><input type="radio" name="gender" value="Male" required> Male</label>
+            <label><input type="radio" name="gender" value="Female" required> Female</label>
+            <label><input type="radio" name="gender" value="Other" required> Prefer not to say</label>
+        </div>
+
+        <label for="Mail">Email</label>
+        <input type="text" id="Mail" placeholder="Enter your Mail id" required>
+
         <label for="prn">PRN Number</label>
         <input type="text" id="prn" placeholder="Enter your PRN number" required>
 
-        <label for="mobile">Mobile Number</label>
+        <label for="Year"> Year of study</label>
+        <select id="Year" required>
+            <option value="">Year of study</option>
+            <option value="1st_Year">1st Year</option>
+            <option value="2st_Year">2nd Year</option>
+            <option value="3st_Year">3rd Year</option>
+            <!-- <option value="outreach">4th Year</option> -->
+        </select>
+
+         <label for="Branch">Branch & Division</label>
+        <input type="text" id="Branch" placeholder="Enter your branch & Division" required>
+
+
+        <label for="mobile">Contact Number</label>
         <input type="tel" id="mobile" placeholder="Enter your mobile number" required>
 
-        <label for="whatsapp">WhatsApp Number</label>
-        <input type="tel" id="whatsapp" placeholder="Enter your WhatsApp number" required>
 
-        <label for="resume">Upload Your Resume</label>
-        <input type="file" id="resume" accept=".pdf,.doc,.docx" required>
+
+        <!-- <label for="whatsapp">WhatsApp Number</label>
+        <input type="tel" id="whatsapp" placeholder="Enter your WhatsApp number" required> -->
+
+        <label for="resume">Upload Your Resume (Optional)</label>
+        <input type="file" id="resume" accept=".pdf,.doc,.docx" >
 
         <label for="domain">Choose the Domain</label>
         <select id="domain" required>
             <option value="">Select a Domain</option>
-            <option value="tech">Tech</option>
-            <option value="event-management">Event Management</option>
-            <option value="design">Design</option>
+            <option value="tech">Technical</option>
+            <option value="event-management">Event Management / PR</option>
+            <option value="design">Designing / Creativity</option>
             <option value="outreach">Outreach</option>
         </select>
 
         <label for="proof">Share your Proof of Work</label>
-        <textarea id="proof" placeholder="Share your best work related to the domain you selected" required></textarea>
+        <textarea id="proof" placeholder="Share your best work related to the domain you selected  (Like Drive folder link etc)" required></textarea>
 
         <label for="reason">Why do you want to join GFG Student Chapter BVDUCOEP?</label>
         <textarea id="reason" placeholder="Let us know your motivation" required></textarea>
 
-        <label for="socials">Share all of your socials</label>
-        <input type="text" id="socials" placeholder="Link your social media profiles" required>
+        <label for="socials">Share all of your socials (If any)</label>
+        <input type="text" id="socials" placeholder="Link of your social media profiles (like Linkedin / instagram)" >
+
+        <label for="Github">Github Link (If any)</label>
+        <input type="text" id="Github" placeholder="Enter your Github link here" required>
 
         <!-- <button type="submit">Submit</button> -->
 
         <!-- submit  -->
-         <button>Button</button>
+         <button>Submit</button>
+
+         <div  id="successModal" style="display:none; border-radius: 5px; position: fixed; z-index: 1; padding-top: 100px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);">
+            <div style="background-color: #313030; margin: auto; border-radius: 10px;  padding: 20px; border: 1px solid #888; width: 80%;">
+              <span id="closeModal" style="color: #3ef506; float: right; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+              <h2>Form Submitted Successfully!</h2>
+              <p style="color: rgb(249, 247, 247);">Please join the recruitment group for further information:</p>
+              <a  style="color: #3ef506;" href="https://chat.whatsapp.com/ImEzhVKZmjt9dijeY48LzV" target="_blank">Join WhatsApp Group</a>
+            </div>
+          </div>
     </form>
   </div>
 
-
-
-
-   
 
     <script src="scriptzz.js"></script>
 </body>
