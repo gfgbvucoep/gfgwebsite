@@ -1,4 +1,4 @@
-const form = document.getElementById('recruitment-form'); // Replace 'yourFormId' with your actual form ID
+ // Replace 'yourFormId' with your actual form ID
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('recruitment-form'); // Replace 'yourFormId' with your actual form ID
     form.addEventListener('submit', function (e) {
@@ -48,6 +48,6 @@ document.addEventListener('DOMContentLoaded', function () {
         e.preventDefault(); 
          // Prevent the form from submitting
                 window.location.href = './whatsappgroup.html';
-                form.reset();
+               
     });
 });
