@@ -178,6 +178,8 @@
             <label><input type="radio" name="gender" value="Other" required> Prefer not to say</label>
         </div>
 
+       
+
         <label for="prn">PRN Number</label>
         <input type="text" name="prn" id="prn" placeholder="Enter your PRN number" required>
 
@@ -191,19 +193,19 @@
         </select>
 
          <label for="Branch">Branch & Division</label>
-        <input type="text" id="Branch" placeholder="Enter your branch & Division" required>
+        <input name="branch" type="text" id="Branch" placeholder="Enter your branch & Division" required>
 
 
-        <label for="mobile">Contact Number</label>
-        <input type="tel" id="mobile" placeholder="Enter your mobile number" required>
+        <label for="mobile">Contact Number (Preferable whatsApp)</label>
+        <input name="mobile" type="tel" id="mobile" placeholder="Enter your mobile number" required>
 
 
 
         <!-- <label for="whatsapp">WhatsApp Number</label>
         <input type="tel" id="whatsapp" placeholder="Enter your WhatsApp number" required> -->
 
-        <label for="resume">Upload Your Resume (Optional)</label>
-        <input type="file" id="resume" accept=".pdf,.doc,.docx" >
+        <!-- <label for="resume">Upload Your Resume (Optional)</label>
+        <input  type="file" id="resume" accept=".pdf,.doc,.docx" > -->
 
         <label for="domain">Choose the Domain</label>
         <select id="domain" name="domain" required>
@@ -214,22 +216,19 @@
             <option value="outreach">Outreach</option>
         </select>
 
-        <label for="proof">Share your Proof of Work</label>
-        <textarea id="proof" placeholder="Share your best work related to the domain you selected  (Like Drive folder link etc)" required></textarea>
-
+       
         <label for="reason">Why do you want to join GFG Student Chapter BVDUCOEP?</label>
         <textarea name="reason" id="reason" placeholder="Let us know your motivation" required></textarea>
 
         <label for="socials">Share all of your socials (If any)</label>
-        <input type="text" id="socials" placeholder="Link of your social media profiles (like Linkedin / instagram)" >
+        <input name="social" type="text" id="socials" placeholder="Link of your social media profiles (like Linkedin / instagram)" >
 
-        <label for="Github">Github Link (If any)</label>
-        <input type="text" id="Github" placeholder="Enter your Github link here" required>
+       
 
         <!-- <button type="submit">Submit</button> -->
 
         <!-- submit  -->
-         <button>Submit</button>
+         <button>Next</button>
 
          <div  id="successModal" style="display:none; border-radius: 5px; position: fixed; z-index: 1; padding-top: 100px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);">
             <div style="background-color: #313030; margin: auto; border-radius: 10px;  padding: 20px; border: 1px solid #888; width: 80%;">
