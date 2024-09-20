@@ -1,63 +1,49 @@
 // document.getElementById('recruitment-form').addEventListener('submit', function(e) {
-//   e.preventDefault();
-
-//   var formData = new FormData(this);
-
-//   fetch('https://script.google.com/macros/s/AKfycbwx1jWrjibQs4sNUh--O-ZhZezVhkOlDQjiaSWDez4SVac8Sl9UuZPvcfgHy3cyXk4U/exec', {
-//     method: 'POST',
-//     body: formData
-//   })
-//   .then(response => response.json())
-//   .then(data => {
-//     if (data.result === "success") {
-//       alert("Form submitted successfully!");
-//     } else {
-//       alert("There was an error submitting the form. Please try again.");
-//     }
-//   })
-//   .catch(error => {
-//     console.error('Error:', error);
-//     alert("An error occurred while submitting the form.");
+//     e.preventDefault();
+    
+//     const formData = new FormData(this);
+  
+//     fetch('https://script.google.com/macros/s/AKfycbwx1jWrjibQs4sNUh--O-ZhZezVhkOlDQjiaSWDez4SVac8Sl9UuZPvcfgHy3cyXk4U/exec', {  // Replace with your actual Web App URL
+//       method: 'POST',
+//       body: formData
+//     })
+//     .then(response => response.json())
+//     .then(data => {
+//       console.log('Success:', data);
+//       alert('Form submitted successfully!\n Please join Recruitment group for the further information \n https://chat.whatsapp.com/ImEzhVKZmjt9dijeY48LzV');
+//     })
+//     .catch((error) => {
+//       console.error('Error:', error);
+//       alert('Form submission failed! \n If you have an issue please contact \n Kshitij Tomar  9039269205 ');
+//     });
 //   });
-// });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('recruitment-form'); // Replace 'yourFormId' with your actual form ID
-  form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      // Prepare the data payload
-      const formData = new FormData(form);
-      const data = {};
-      formData.forEach((value, key) => {
-          data[key] = value;
-      });
-
-      // API URL and headers
-      const apiURL = 'https://api.airtable.com/v0/appuOZR9OHaQs4Frf/gfgrct2425'; // Replace 'yourBaseId' and 'yourTableName'
-      const headers = {
-          Authorization: 'Bearer patbuASv8EsA7ohtx.7dec822878029ff9a70afe0100314ed8ab062cbc1a23e7fc7372a0905fb2a986', // Replace 'yourPersonalAccessToken' with your actual PAT
-          'Content-Type': 'application/json'
-      };
-
-      // Fetch request to Airtable API
-      fetch(apiURL, {
-        method: 'POST',
-        headers: headers,
-        body: JSON.stringify({ fields: data })
+  // model Script
+  document.getElementById('recruitment-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+  
+    fetch('https://script.google.com/macros/s/AKfycbwx1jWrjibQs4sNUh--O-ZhZezVhkOlDQjiaSWDez4SVac8Sl9UuZPvcfgHy3cyXk4U/exec', {  // Replace with your actual Web App URL
+      method: 'POST',
+      body: formData
     })
     .then(response => response.json())
     .then(data => {
-        if(data.error) {
-            console.error('Error:', data.error);
-        } else {
-            console.log('Success:', data);
-            form.reset();
-            alert('Form submitted successfully!');
-        }
+      console.log('Success:', data);
+      // Show custom modal
+      document.getElementById('successModal').style.display = 'block';
     })
     .catch((error) => {
-        console.error('Network Error:', error);
+      console.error('Error:', error);
+      alert('Form submission failed! \n If you have an issue please contact \n 9039269205 ');
     });
   });
-});
+
+  // Close the modal when the user clicks on the close button
+  document.getElementById('closeModal').addEventListener('click', function() {
+    document.getElementById('successModal').style.display = 'none';
+  });
+
+
+
