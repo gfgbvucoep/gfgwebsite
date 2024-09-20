@@ -45,5 +45,47 @@
     document.getElementById('successModal').style.display = 'none';
   });
 
+  // routing to next page js
+
+  
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('recruitment-form');
+        const nextButton = form.querySelector('button');
+        
+        nextButton.addEventListener('click', function (e) {
+            e.preventDefault();  // Prevent the form from submitting
+
+            // Get the selected domain from the form
+            const domain = document.getElementById('domain').value;
+
+            // Validate if a domain is selected
+            if (!domain) {
+                alert("Please select a domain.");
+                return;
+            }
+
+            // Redirect to different pages based on the selected domain
+            switch (domain) {
+                case 'tech':
+                    window.location.href = './Form/formtech.html';
+                    break;
+                case 'event-management':
+                    window.location.href = './Form/formevent.html';
+                    break;
+                case 'design':
+                    window.location.href = './Form/formdesign.html';
+                    break;
+                case 'outreach':
+                    window.location.href = './Form/formoutrech.html';
+                    break;
+                default:
+                    alert("Please select a valid domain.");
+            }
+        });
+    });
+
+
+
+
 
 
