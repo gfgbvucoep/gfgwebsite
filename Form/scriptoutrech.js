@@ -46,7 +46,8 @@ document.addEventListener('DOMContentLoaded', function () {
     
     form.addEventListener('click', function (e) {
         e.preventDefault(); 
-        form.reset(); // Prevent the form from submitting
+         // Prevent the form from submitting
                 window.location.href = './whatsappgroup.html';
+                form.reset();
     });
 });
